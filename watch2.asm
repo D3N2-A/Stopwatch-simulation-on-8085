@@ -118,3 +118,5 @@ INLOOP:
 	RET
 
 org 8fbfh
+
+hlt
