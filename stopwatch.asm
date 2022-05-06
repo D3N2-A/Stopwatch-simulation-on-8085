@@ -40,3 +40,9 @@ ADI 01H
 DAA ; Make L = 0, and increment H in decimal
 CPI 60H
 JZ RESET ; If H = 60, jump to RESET
+
+
+; RST7.5 Interrupt Service Subroutine
+
+ORG FFB1H ;
+HLT ; ; This is the RST7.5 ISS
