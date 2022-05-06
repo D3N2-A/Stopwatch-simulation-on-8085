@@ -28,3 +28,15 @@ ADI 01H
 DAA ; Increment L value in decimal
 CPI 60H
 JZ INC_MIN ; If L = 60, jump to INC_MIN
+
+MOV L, A
+JMP REPEAT
+
+INC_MIN:
+
+MVI L, 00H
+MOV A, H
+ADI 01H
+DAA ; Make L = 0, and increment H in decimal
+CPI 60H
+JZ RESET ; If H = 60, jump to RESET
